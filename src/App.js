@@ -1,34 +1,29 @@
 import React from 'react';
 import './main.scss';
-import Nav from './components/Nav';
+import Main from './components/Main';
 import Header from './components/Header';
+import Article from './components/Article';
 import styled from 'styled-components';
-
-const LeftContainer = styled.div`
-	background: #537463;
-	grid-row: 0 / 2;
-`;
-const RightContainer = styled.div`
-	background: #537463;
-	grid-row: 2 / 5;
-`;
+import Aside from './components/Aside';
+import Footer from './components/Footer';
 
 const AppLayout = styled.div`
 	height: 100vh;
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(4, 1fr);
+	grid-template-columns: 1fr 250px 100px;
+	grid-template-rows: 100px 1fr 100px;
+	grid-template-areas: "header header header" "main article aside"
+		"footer footer footer";
 `;
 
 function App() {
 	return (
 		<AppLayout>
-			<LeftContainer>
-				<Nav />
-			</LeftContainer>
-			<RightContainer>
-				<Header />
-			</RightContainer>
+			<Header />
+			<Main />
+			<Article />
+			<Aside />
+			<Footer />
 		</AppLayout>
 	);
 }
