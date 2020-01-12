@@ -7,24 +7,25 @@ import styled from 'styled-components';
 import Aside from './components/Aside';
 import Footer from './components/Footer';
 
-const AppLayout = styled.div`
+const LandingLayout = styled.div`
 	height: 100vh;
 	display: grid;
-	grid-template-columns: 1fr 250px 100px;
+	grid-template-columns: 1fr 400px 100px;
 	grid-template-rows: 100px 1fr 100px;
 	grid-template-areas: "header header header" "main article aside"
 		"footer footer footer";
+	/* grid-gap: 20px; */
 `;
 
 function App() {
 	return (
-		<AppLayout>
+		<LandingLayout>
 			<Header />
 			<Main />
 			<Article />
 			<Aside />
 			<Footer />
-		</AppLayout>
+		</LandingLayout>
 	);
 }
 

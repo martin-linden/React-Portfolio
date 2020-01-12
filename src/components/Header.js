@@ -1,27 +1,32 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import './img/logo.svg';
+import logo from './logo.svg';
 
-/* const Title = styled.h1`
-	font-size: 300%;
-	margin-bottom: 0%;
-	color: white;
-`; */
+const Logo = styled.img`
+	height: 40px;
+	margin-left: 2%;
+`;
 
-/* const Text = styled.p`
-	color: white;
-	margin-top: 1%;
-	max-width: 300px;
-`; */
+const Contact = styled.p`
+	color: #f65744;
+	margin-right: 5%;
+`;
 
 const Container = styled.div`
-	padding: 10%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	grid-area: header;
-	background: blue;
+	background: white;
 `;
 
 export default class Header extends Component {
 	render() {
-		return <Container />;
+		return (
+			<Container>
+				<Logo src={logo} alt="test" />
+				<Contact>CONTACT</Contact>
+			</Container>
+		);
 	}
 }
