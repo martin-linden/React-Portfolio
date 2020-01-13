@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import profile from './profile.svg';
 
-/* const NavBar = styled.h6`color: white;`; */
-
 const Profile = styled.img`height: 80%;`;
 
 const Container = styled.div`
@@ -18,7 +16,7 @@ export default class Main extends Component {
 	render() {
 		return (
 			<Container>
-				<Profile src={profile} alt="test" />
+				<Profile src={profile} alt="profile-picture" />
 			</Container>
 		);
 	}

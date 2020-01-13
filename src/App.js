@@ -10,11 +10,17 @@ import Footer from './components/Footer';
 const LandingLayout = styled.div`
 	height: 100vh;
 	display: grid;
-	grid-template-columns: 1fr 400px 100px;
-	grid-template-rows: 100px 1fr 100px;
+	grid-template-columns: 700px 1fr 100px;
+	grid-template-rows: 100px minmax(400px, 1fr) 100px;
 	grid-template-areas: "header header header" "main article aside"
 		"footer footer footer";
-	/* grid-gap: 20px; */
+	@media (max-width: 760px) {
+		//ipad
+		grid-template-columns: 1fr 100px;
+		grid-template-rows: 50px 420px 1fr 50px;
+		grid-template-areas: "header header" "main main" "article aside"
+			"footer aside";
+	}
 `;
 
 function App() {
