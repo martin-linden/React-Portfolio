@@ -6,7 +6,10 @@ import Article from './components/Article';
 import styled from 'styled-components';
 import Aside from './components/Aside';
 import Footer from './components/Footer';
+import Contact from './components/Contact';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
+// Layout
 const LandingLayout = styled.div`
 	height: 100vh;
 	display: grid;
@@ -23,15 +26,24 @@ const LandingLayout = styled.div`
 	}
 `;
 
+const ContactLayout = styled.div`height: auto;`;
+
 function App() {
 	return (
-		<LandingLayout>
-			<Header />
-			<Main />
-			<Article />
-			<Aside />
-			<Footer />
-		</LandingLayout>
+		<Router>
+			<Switch>
+				<LandingLayout>
+					<Header />
+					<Main />
+					<Article />
+					<Aside />
+					<Footer />
+				</LandingLayout>
+				<ContactLayout>
+					<Route path="/contact" component={Contact} />
+				</ContactLayout>
+			</Switch>
+		</Router>
 	);
 }
 

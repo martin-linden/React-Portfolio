@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import logo from './logo.svg';
+import { Link } from 'react-router-dom';
 
 const Logo = styled.img`
 	height: 40px;
 	margin-left: 2%;
-`;
-
-const Contact = styled.p`
-	color: #f65744;
-	margin-right: 5%;
 `;
 
 const Container = styled.div`
@@ -25,7 +21,7 @@ export default class Header extends Component {
 		return (
 			<Container>
 				<Logo src={logo} alt="test" />
-				<Contact>CONTACT</Contact>
+				<Link to="/contact">CONTACT</Link>
 			</Container>
 		);
 	}
