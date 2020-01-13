@@ -26,25 +26,35 @@ const LandingLayout = styled.div`
 	}
 `;
 
-const ContactLayout = styled.div`height: auto;`;
-
+//const ContactLayout = styled.div`height: auto;`;
+const ContactLayout = styled(Contact)`height: auto;`;
 function App() {
 	return (
 		<Router>
-			<Switch>
-				<LandingLayout>
-					<Header />
-					<Main />
-					<Article />
-					<Aside />
-					<Footer />
-				</LandingLayout>
-				<ContactLayout>
-					<Route path="/contact" component={Contact} />
-				</ContactLayout>
-			</Switch>
+			{/* 	<Switch> */}
+			<LandingLayout>
+				<Header />
+				<Route exact path="/" component={Landing} />
+				<Route path="/contact" component={ContactLayout} />
+				{/* 			<Main />
+				<Article />
+				<Aside /> */}
+				<Footer />
+			</LandingLayout>
+			{/* <ContactLayout> */}
+
+			{/* 	</ContactLayout> */}
+			{/* 	</Switch> */}
 		</Router>
 	);
 }
 
 export default App;
+
+const Landing = () => (
+	<React.Fragment>
+		<Main />
+		<Article />
+		<Aside />
+	</React.Fragment>
+);
