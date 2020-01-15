@@ -16,12 +16,16 @@ const Container = styled.div`
 	background: white;
 `;
 
+const Styledlink = styled(Link)`color: #f65744;
+margin-right: 5%;
+text-decoration: none;`;
+
 export default class Header extends Component {
 	render() {
 		return (
 			<Container>
 				<Logo src={logo} alt="test" />
-				<Link to="/contact">CONTACT</Link>
+				<Styledlink to="/contact">CONTACT</Styledlink>
 			</Container>
 		);
 	}

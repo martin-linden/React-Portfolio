@@ -7,7 +7,7 @@ import styled from 'styled-components';
 import Aside from './components/Aside';
 import Footer from './components/Footer';
 import Contact from './components/Contact';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 // Layout
 const LandingLayout = styled.div`
@@ -31,20 +31,12 @@ const ContactLayout = styled(Contact)`height: auto;`;
 function App() {
 	return (
 		<Router>
-			{/* 	<Switch> */}
 			<LandingLayout>
 				<Header />
 				<Route exact path="/" component={Landing} />
 				<Route path="/contact" component={ContactLayout} />
-				{/* 			<Main />
-				<Article />
-				<Aside /> */}
 				<Footer />
 			</LandingLayout>
-			{/* <ContactLayout> */}
-
-			{/* 	</ContactLayout> */}
-			{/* 	</Switch> */}
 		</Router>
 	);
 }

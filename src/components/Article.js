@@ -12,6 +12,11 @@ const IntroText = styled.p`
 	max-width: 250px;
 `;
 
+const Lines = styled.hr`
+	color: #f65744;
+	transform: rotate(45deg);
+`;
+
 const Container = styled.div`
 	display: flex;
 	flex-direction: column;
@@ -35,6 +40,7 @@ export default class Article extends Component {
 					elit, sed do eiusmod tempor incididunt ut labore et
 					dolor
 				</IntroText>
+				<hr />
 			</Container>
 		);
 	}
