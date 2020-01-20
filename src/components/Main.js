@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import profile from './profile.svg';
+import profile from './Asset1.svg';
 
-const Profile = styled.img`height: 80%;`;
+const Profile = styled.img`height: 70%;`;
 
 const Container = styled.div`
 	display: flex;

@@ -3,6 +3,11 @@ import styled from 'styled-components';
 
 /* const Links = styled.p`color: black;`; */
 
+const Form = styled.form`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+`;
 const Container = styled.div`
 	display: flex;
 	justify-content: center;
@@ -13,6 +18,10 @@ const Container = styled.div`
 
 export default class Contact extends Component {
 	render() {
-		return <Container>HEJHOPP</Container>;
+		return (
+			<Container>
+				<Form>Name</Form>
+			</Container>
+		);
 	}
 }

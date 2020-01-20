@@ -14,6 +14,7 @@ const Container = styled.div`
 	background: white;
 	grid-area: footer;
 	margin-right: 5%;
+	font-weight: 400;
 `;
 
 export default class Footer extends Component {

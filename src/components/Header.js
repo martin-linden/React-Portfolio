@@ -4,8 +4,26 @@ import logo from './logo.svg';
 import { Link } from 'react-router-dom';
 
 const Logo = styled.img`
-	height: 40px;
+	display: flex;
+	justify-content: flex-start;
+	height: 50px;
 	margin-left: 2%;
+`;
+
+const Styledlink = styled(Link)`color: black;
+text-decoration: none;
+margin-right: 5%`;
+
+const Styledlink2 = styled(Link)`color: #f65744;
+text-decoration: none;`;
+
+const LinkContainer = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	grid-area: header;
+	background: white;
+	font-weight: 400;
 `;
 
 const Container = styled.div`
@@ -14,18 +32,18 @@ const Container = styled.div`
 	justify-content: space-between;
 	grid-area: header;
 	background: white;
+	margin-right: 5%;
 `;
-
-const Styledlink = styled(Link)`color: #f65744;
-margin-right: 5%;
-text-decoration: none;`;
 
 export default class Header extends Component {
 	render() {
 		return (
 			<Container>
 				<Logo src={logo} alt="test" />
-				<Styledlink to="/contact">CONTACT</Styledlink>
+				<LinkContainer>
+					<Styledlink to="/contact">PROJECTS</Styledlink>
+					<Styledlink2 to="/contact">CONTACT</Styledlink2>
+				</LinkContainer>
 			</Container>
 		);
 	}
