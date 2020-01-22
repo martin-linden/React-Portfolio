@@ -24,16 +24,14 @@ export default class Footer extends Component {
 	render() {
 		return (
 			<Container>
-				<Links>
-					<a href="https://github.com/martin-linden">
-						GITHUB <span />
-					</a>
+				<Links href="https://github.com/martin-linden">
+					GITHUB <span />
 				</Links>
-				<Links>
-					<a href="https://www.linkedin.com/in/martinlindensthlm/?locale=sv_SE">
-						LINKEDIN
-					</a>
+
+				<Links href="https://www.linkedin.com/in/martinlindensthlm/?locale=sv_SE">
+					LINKEDIN
 				</Links>
+
 				<Text>BACK TO LANDING</Text>
 			</Container>
 		);
