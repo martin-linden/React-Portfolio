@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import logo from './logo.svg';
-import { Link } from 'react-router-dom';
+import { NavLink as Link } from 'react-router-dom';
 
 const Logo = styled.img`
 	display: flex;
@@ -12,7 +12,14 @@ const Logo = styled.img`
 
 const Styledlink = styled(Link)`color: black;
 text-decoration: none;
-margin-right: 10%`;
+margin-right: 10%
+&:hover {
+	background-color: lightgrey;
+}
+&.active {
+	text-decoration: underline;
+}
+`;
 
 const LinkContainer = styled.div`
 	display: flex;
@@ -38,8 +45,12 @@ export default class Header extends Component {
 			<Container>
 				<Logo src={logo} alt="test" />
 				<LinkContainer>
-					<Styledlink to="/contact">PROJECTS</Styledlink>
-					<Styledlink to="/contact">CONTACT</Styledlink>
+					<Styledlink to="/" exact>
+						PROJECTS
+					</Styledlink>
+					<Styledlink to="/contact" exact>
+						CONTACT
+					</Styledlink>
 				</LinkContainer>
 			</Container>
 		);

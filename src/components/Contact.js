@@ -18,10 +18,6 @@ const Container = styled.div`
 
 export default class Contact extends Component {
 	render() {
-		return (
-			<Container>
-				<Form>Name</Form>
-			</Container>
-		);
+		return <Container />;
 	}
 }

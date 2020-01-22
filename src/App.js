@@ -8,7 +8,7 @@ import Aside from './components/Aside';
 import LandingFooter from './components/LandingFooter';
 import Contact from './components/Contact';
 import About from './components/About';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import '../src/App.css';
 import '../src/main.scss';
@@ -42,16 +42,27 @@ const ContactLayout = styled(Contact)`height: auto;`;
 function App() {
 	return (
 		<Router>
-			<LandingLayout>
-				<Header />
-				<Route exact path="/" component={Landing} />
-				<Route path="/contact" component={ContactLayout} />
-				<LandingFooter />
-			</LandingLayout>
-			<AboutLayout>
-				<About />
-				<Footer />
-			</AboutLayout>
+			<Switch>
+				<Route path="/contact">
+					<ContactLayout>
+						<Header />
+					</ContactLayout>
+					<Header />
+					<Footer />
+				</Route>
+				<Route path="/">
+					<LandingLayout>
+						<Header />
+						<Main />
+						<Article />
+						<LandingFooter />
+					</LandingLayout>
+					<AboutLayout>
+						<About />
+						<Footer />
+					</AboutLayout>
+				</Route>
+			</Switch>
 		</Router>
 	);
 }
