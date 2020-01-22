@@ -12,21 +12,22 @@ const TitleContainer = styled.div``;
 
 const IntroText = styled.p`
 	color: black;
-	max-width: 400px;
+	max-width: 350px;
 	line-height: 150%;
 	border-left: #f65744 2px solid;
-	padding-left: 15px;
-	transform: translateX(-15px);
+	padding-left: 10px;
+	transform: translateX(-10px);
 `;
 
 const LineContainer = styled.div``;
 
 const Nav = styled.h4`
 	font-weight: 600;
-	content: ""; /* This is necessary for the pseudo element to work. */
+	/* content: ""; /* This is necessary for the pseudo element to work. */
 	width: 30%; /* Change this to whatever width you want. */
 	border-bottom: 2px solid #f65744; /* This creates the border. Replace black with whatever color you want. */
-	padding-bottom: 15px;
+	padding-bottom: 10px;
+	color: #434343;
 `;
 
 const Container = styled.div`
@@ -34,7 +35,7 @@ const Container = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background: white;
+	/* background: white; */
 	grid-area: article;
 `;
 
@@ -52,9 +53,10 @@ export default class Article extends Component {
 						<IntroText>
 							Lorem ipsum dolor sit amet, consectetur
 							adipiscing elit, sed do eiusmod tempor
-							incididunt ut labore et dolorLorem ipsum dolor
-							sit amet, consectetur adipiscing elit, sed do
-							eiusmod tempor incididunt ut labore et dolor
+							incididunt ut labore et dolor. Lorem ipsum
+							dolor sit amet, consectetur adipiscing elit,
+							sed do eiusmod tempor incididunt ut labore et
+							dolor
 						</IntroText>
 						<Nav>READ MORE</Nav>
 					</LineContainer>

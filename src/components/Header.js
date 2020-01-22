@@ -12,10 +12,7 @@ const Logo = styled.img`
 
 const Styledlink = styled(Link)`color: black;
 text-decoration: none;
-margin-right: 5%`;
-
-const Styledlink2 = styled(Link)`color: #f65744;
-text-decoration: none;`;
+margin-right: 10%`;
 
 const LinkContainer = styled.div`
 	display: flex;
@@ -42,7 +39,7 @@ export default class Header extends Component {
 				<Logo src={logo} alt="test" />
 				<LinkContainer>
 					<Styledlink to="/contact">PROJECTS</Styledlink>
-					<Styledlink2 to="/contact">CONTACT</Styledlink2>
+					<Styledlink to="/contact">CONTACT</Styledlink>
 				</LinkContainer>
 			</Container>
 		);
