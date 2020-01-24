@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import c1 from './c1.png';
+import profile from './Asset1.svg';
 
 const Picture = styled.img``;
 
@@ -12,22 +13,19 @@ const Container = styled.div`
 	justify-content: center;
 	align-items: center;
 	grid-area: carousel;
+	padding: 5%;
 `;
 
 export default function CarouselComponent() {
 	return (
 		<Container>
 			<div class="carousel-wrapper">
-				<Carousel
-					width="700px"
-					useKeyboardArrows
-					showThumbs={true}
-				>
+				<Carousel useKeyboardArrows showThumbs={false}>
 					<div>
 						<img src={c1} />
 					</div>
 					<div>
-						<img src={c1} />
+						<img src={profile} />
 					</div>
 					<div>
 						<img src={c1} />

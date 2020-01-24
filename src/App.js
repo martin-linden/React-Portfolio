@@ -6,7 +6,6 @@ import Article from './components/Article';
 import styled from 'styled-components';
 import LandingFooter from './components/LandingFooter';
 import Contact from './components/Contact';
-import About from './components/About';
 import Intro from './components/Intro';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
@@ -14,6 +13,7 @@ import '../src/App.css';
 import '../src/main.scss';
 import Footer from './components/Footer';
 import CarouselComponent from './components/CarouselComponent';
+import Projects from './components/Projects';
 
 // Layout
 const LandingLayout = styled.div`
@@ -31,21 +31,21 @@ const LandingLayout = styled.div`
 	}
 `;
 
-const AboutLayout = styled.div`
+const ProjectLayout = styled.div`
 	background-color: #f8f8f8;
-	height: 600px;
+	height: 400px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 70px;
-	grid-template-areas: "about picture" "footer footer";
+	grid-template-rows: 1fr;
+	grid-template-areas: "about picture";
 `;
 
 const ContactLayout = styled.div`
 	min-height: 100vh;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 100px 1fr 100px;
-	grid-template-areas: "header header" "pic contact" "footer footer";
+	grid-template-rows: 100px 1fr;
+	grid-template-areas: "header header" "pic contact";
 `;
 
 function App() {
@@ -65,9 +65,9 @@ function App() {
 						<Article />
 						<LandingFooter />
 					</LandingLayout>
-					<AboutLayout>
-						<About />
-					</AboutLayout>
+					<ProjectLayout>
+						<Projects />
+					</ProjectLayout>
 				</Route>
 			</Switch>
 		</Router>

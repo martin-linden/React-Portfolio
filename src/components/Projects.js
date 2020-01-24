@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import AboutMe from './about.svg';
+import computer from './projects.svg';
 
 const Title = styled.h3`
 	color: #2f4858;
@@ -42,7 +42,7 @@ const TextContainer = styled.div`
 	grid-area: about;
 `;
 
-export default class About extends Component {
+export default class Projects extends Component {
 	render() {
 		return (
 			<React.Fragment>
@@ -50,22 +50,13 @@ export default class About extends Component {
 					<TextLayout>
 						<Title>PROJECTS</Title>
 						<Text>
-							Lorem ipsum dolor sit amet, consectetur
-							adipiscing elit, sed do eiusmod tempor
-							incididunt ut labore et dolore magna aliqua. Ut
-							enim ad minim veniam, quis nostrud exercitation
-							ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in
-							reprehenderit in voluptate velit esse cillum
-							dolore eu fugiat nulla pariatur. Excepteur sint
-							occaecat cupidatat non proident, sunt in culpa
-							qui officia deserunt mollit anim id est
-							laborum.
+							Here are some of the early projects i've made
+							so far.
 						</Text>
 					</TextLayout>
 				</TextContainer>
 				<PictureContainer>
-					<Picture src={AboutMe} />
+					<Picture src={computer} />
 				</PictureContainer>
 			</React.Fragment>
 		);
