@@ -4,23 +4,26 @@ import Main from './components/Main';
 import Header from './components/Header';
 import Article from './components/Article';
 import styled from 'styled-components';
-import Aside from './components/Aside';
 import LandingFooter from './components/LandingFooter';
 import Contact from './components/Contact';
 import About from './components/About';
+import Intro from './components/Intro';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import '../src/App.css';
 import '../src/main.scss';
 import Footer from './components/Footer';
+import CarouselComponent from './components/CarouselComponent';
 
 // Layout
 const LandingLayout = styled.div`
+	background: #f0edee;
 	height: 100vh;
+	max-width: 100vw;
 	display: grid;
-	grid-template-columns: 40% 1fr;
+	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 100px minmax(400px, 1fr) 100px;
-	grid-template-areas: "header header" "main article"
+	grid-template-areas: "header header" "intro article"
 		"landingFooter landingFooter";
 
 	@media (max-width: 700px) {
@@ -37,7 +40,13 @@ const AboutLayout = styled.div`
 	grid-template-areas: "about picture" "footer footer";
 `;
 
-const ContactLayout = styled(Contact)`height: auto;`;
+const ContactLayout = styled.div`
+	min-height: 100vh;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 100px 1fr 100px;
+	grid-template-areas: "header header" "pic contact" "footer footer";
+`;
 
 function App() {
 	return (
@@ -46,20 +55,18 @@ function App() {
 				<Route path="/contact">
 					<ContactLayout>
 						<Header />
+						<Contact />
 					</ContactLayout>
-					<Header />
-					<Footer />
 				</Route>
 				<Route path="/">
 					<LandingLayout>
 						<Header />
-						<Main />
+						<Intro />
 						<Article />
 						<LandingFooter />
 					</LandingLayout>
 					<AboutLayout>
 						<About />
-						<Footer />
 					</AboutLayout>
 				</Route>
 			</Switch>

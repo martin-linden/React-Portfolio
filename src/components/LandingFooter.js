@@ -11,7 +11,6 @@ const Container = styled.div`
 	display: flex;
 	justify-content: flex-end;
 	align-items: flex-start;
-	background: white;
 	grid-area: landingFooter;
 	margin-right: 5%;
 	font-weight: 400;

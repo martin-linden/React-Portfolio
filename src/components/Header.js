@@ -10,14 +10,17 @@ const Logo = styled.img`
 	margin-left: 2%;
 `;
 
-const Styledlink = styled(Link)`color: black;
+const Styledlink = styled(Link)`
+opacity: 80%
+color: black;
 text-decoration: none;
-margin-right: 10%
 &:hover {
 	background-color: lightgrey;
 }
 &.active {
+	opacity: 100%;
 	text-decoration: underline;
+	color: #f65744;
 }
 `;
 
@@ -26,17 +29,19 @@ const LinkContainer = styled.div`
 	align-items: center;
 	justify-content: space-between;
 	grid-area: header;
-	background: white;
 	font-weight: 400;
+	margin-right: 2%;
 `;
 
 const Container = styled.div`
+	/* position: fixed;
+	top: 25px;
+	left: 0;
+	right: 0; */
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	grid-area: header;
-	background: white;
-	margin-right: 5%;
 `;
 
 export default class Header extends Component {
@@ -46,7 +51,7 @@ export default class Header extends Component {
 				<Logo src={logo} alt="test" />
 				<LinkContainer>
 					<Styledlink to="/" exact>
-						PROJECTS
+						HOME
 					</Styledlink>
 					<Styledlink to="/contact" exact>
 						CONTACT
