@@ -11,7 +11,22 @@ const FirstTitle = styled.h1`
 	padding: 1%;
 	padding-left: 10px;
 	padding-right: 10px;
+	font-weight: 300;
 `;
+const FirstTitle2 = styled.h1`
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: #f0715e;
+	color: white;
+	font-size: 45px;
+	padding: 1%;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-left: 10px;
+	font-weight: 300;
+`;
+
+const FirstTitleContainer = styled.div`display: flex;`;
 
 const Title = styled.h1`
 	display: block;
@@ -23,6 +38,7 @@ const Title = styled.h1`
 	padding: 1%;
 	padding-left: 10px;
 	padding-right: 10px;
+	font-weight: 300;
 `;
 
 const Title2 = styled.h1`
@@ -35,6 +51,7 @@ const Title2 = styled.h1`
 	padding: 1%;
 	padding-left: 10px;
 	padding-right: 10px;
+	font-weight: 300;
 `;
 const TextContainer = styled.div`
 	display: flex;
@@ -56,7 +73,10 @@ export default class Intro extends Component {
 		return (
 			<Container>
 				<TextContainer>
-					<FirstTitle>Hi! </FirstTitle>
+					<FirstTitleContainer>
+						<FirstTitle>Hi! </FirstTitle>
+						<FirstTitle2>I'm </FirstTitle2>
+					</FirstTitleContainer>
 					<Title>Martin</Title>
 					<Title2>Lindén</Title2>
 				</TextContainer>

@@ -18,7 +18,7 @@ const Title = styled.h1`
 	margin-bottom: 0;
 	color: #f65744;
 	font-size: 70px;
-	font-weight: 900;
+	font-weight: 300;
 `;
 const Title2 = styled.h1`
 	display: block;
@@ -26,7 +26,7 @@ const Title2 = styled.h1`
 	margin-bottom: 0;
 	color: #2f4858;
 	font-size: 70px;
-	font-weight: 900;
+	font-weight: 300;
 `;
 
 const TitleContainer = styled.div`

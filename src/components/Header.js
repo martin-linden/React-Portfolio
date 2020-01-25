@@ -15,12 +15,16 @@ opacity: 80%
 color: black;
 text-decoration: none;
 &:hover {
-	background-color: lightgrey;
+	background-color: #2f4858;
+	color: white;
+	padding: 1%;
 }
 &.active {
 	opacity: 100%;
 	text-decoration: underline;
-	color: #f65744;
+	color: white
+	background: #f65744; 
+	padding: 1%;
 }
 `;
 
