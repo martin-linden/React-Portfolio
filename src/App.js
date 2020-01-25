@@ -7,6 +7,7 @@ import styled from 'styled-components';
 import LandingFooter from './components/LandingFooter';
 import Contact from './components/Contact';
 import Intro from './components/Intro';
+import Intro2 from './components/Intro2';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import '../src/App.css';
@@ -14,14 +15,15 @@ import '../src/main.scss';
 import Footer from './components/Footer';
 import CarouselComponent from './components/CarouselComponent';
 import Projects from './components/Projects';
+import ImageGallery from './components/ImageGallery';
 
 // Layout
 const LandingLayout = styled.div`
-	background: #f0edee;
+	background: white;
 	height: 100vh;
 	max-width: 100vw;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr 60%;
 	grid-template-rows: 100px minmax(400px, 1fr) 100px;
 	grid-template-areas: "header header" "intro article"
 		"landingFooter landingFooter";
@@ -47,6 +49,14 @@ const ContactLayout = styled.div`
 	grid-template-rows: 100px 1fr;
 	grid-template-areas: "header header" "pic contact";
 `;
+const ImageGalleryLayout = styled.div`
+	height: 200px;
+	max-width: 100vw;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+	grid-template-areas: "kyh kyh2";
+`;
 
 function App() {
 	return (
@@ -68,6 +78,9 @@ function App() {
 					<ProjectLayout>
 						<Projects />
 					</ProjectLayout>
+					<ImageGalleryLayout>
+						<ImageGallery />
+					</ImageGalleryLayout>
 				</Route>
 			</Switch>
 		</Router>

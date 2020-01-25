@@ -13,7 +13,7 @@ const Container = styled.div`
 	align-items: flex-start;
 	grid-area: landingFooter;
 	margin-right: 5%;
-	font-weight: 400;
+	font-weight: 500;
 `;
 
 export default class LandingFooter extends Component {

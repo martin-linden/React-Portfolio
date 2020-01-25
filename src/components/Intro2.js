@@ -5,36 +5,33 @@ const FirstTitle = styled.h1`
 	display: block;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	background-color: #868686;
-	color: white;
-	font-size: 45px;
+	background-color: white;
+	color: #868686;
+	font-size: 40px;
+	font-weight: 900;
 	padding: 1%;
-	padding-left: 10px;
-	padding-right: 10px;
 `;
 
 const Title = styled.h1`
 	display: block;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	background-color: #2f4858;
-	color: white;
-	font-size: 75px;
+	background-color: white;
+	color: #2f4858;
+	font-size: 70px;
+	font-weight: 900;
 	padding: 1%;
-	padding-left: 10px;
-	padding-right: 10px;
 `;
 
 const Title2 = styled.h1`
 	display: block;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	background-color: #f65744;
-	color: white;
-	font-size: 75px;
+	background-color: white;
+	color: #f65744;
+	font-size: 70px;
+	font-weight: 900;
 	padding: 1%;
-	padding-left: 10px;
-	padding-right: 10px;
 `;
 const TextContainer = styled.div`
 	display: flex;
@@ -47,18 +44,18 @@ const Container = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: flex-end;
-	grid-area: intro;
+	align-items: center;
+	grid-area: intro2;
 `;
 
-export default class Intro extends Component {
+export default class Intro2 extends Component {
 	render() {
 		return (
 			<Container>
 				<TextContainer>
-					<FirstTitle>Hi! </FirstTitle>
-					<Title>Martin</Title>
-					<Title2>Lindén</Title2>
+					<FirstTitle>& I am a </FirstTitle>
+					<Title>Front-end</Title>
+					<Title2>Developer</Title2>
 				</TextContainer>
 			</Container>
 		);
