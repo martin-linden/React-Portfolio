@@ -73,8 +73,15 @@ const ContactLayout = styled.div`
 	/* height: calc(var(--vh, 1vh) * 100); */
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 100px 1fr;
-	grid-template-areas: "header header" "pic contact";
+	grid-template-rows: 100px 1fr 100px;
+	grid-template-areas: "header header" "pic contact"
+		"landingFooter landingFooter";
+	@media (max-width: 618px) {
+		//small-screen
+		grid-template-columns: 1fr;
+		grid-template-areas: "header header" "contact contact"
+			"landingFooter landingFooter";
+	}
 `;
 const ImageGalleryLayout = styled.div`
 	height: auto;
@@ -93,6 +100,7 @@ function App() {
 					<ContactLayout>
 						<Header />
 						<Contact />
+						<LandingFooter />
 					</ContactLayout>
 				</Route>
 				<Route path="/">
