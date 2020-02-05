@@ -23,11 +23,30 @@ const TextContainer = styled.div`
 	grid-area: contact;
 `;
 
+const MainContainer = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	grid-area: contact;
+	padding: 3%;
+`;
+
 const Picture = styled.img`
 	display: flex;
 	flex-direction: row;
 	align-items: flex-end;
-	height: 80%;
+	height: 500px;
+
+	@media (max-width: 780px) {
+		//medium-screen
+		height: 300px;
+	}
+
+	@media (max-width: 618px) {
+		//small-screen
+		display: none;
+		pointer-events: none;
+	}
 `;
 
 const TextArea = styled.div`margin-bottom: 4%;`;
@@ -59,46 +78,48 @@ export default class Contact extends Component {
 				<Container>
 					<Picture src={AboutMe} />
 				</Container>
-				<TextContainer>
-					<Title>Hi there!</Title>
-					<TextArea>
-						<Text>
-							I'm a front-end developer from Stockholm,
-							Sweden currently studying at KYH. Passionate
-							about developing smart and good looking
-							solutions for the web.
-						</Text>
-					</TextArea>
-					<TextArea>
-						<Text>
-							Check out my github here:
+				<MainContainer>
+					<TextContainer>
+						<Title>Hi there!</Title>
+						<TextArea>
+							<Text>
+								I'm a front-end developer from Stockholm,
+								Sweden currently studying at KYH.
+								Passionate about developing smart and good
+								looking solutions for the web.
+							</Text>
+						</TextArea>
+						<TextArea>
+							<Text>
+								Check out my github here:
+								<Span>
+									<Links href="https://github.com/martin-linden">
+										github.com/martin-linden
+									</Links>
+								</Span>
+							</Text>
+						</TextArea>
+						<TextArea>
+							Hard Skills - HTML, CSS, JS, React{' '}
+							<Span>Coding Tools - Github, NPM</Span>
 							<Span>
-								<Links href="https://github.com/martin-linden">
-									github.com/martin-linden
+								Design Tools - XD, Illustrator, Photoshop,
+								After effects, Fusion 360, Keyshot{' '}
+							</Span>
+							<Span>
+								Soft Skills - Project leading, Team work{' '}
+							</Span>
+						</TextArea>
+						<TextArea>
+							Send me an email!{' '}
+							<Span>
+								<Links href="mailto:martinlinden.sthlm@icloud.com">
+									martinlinden.sthlm@icloud.com
 								</Links>
 							</Span>
-						</Text>
-					</TextArea>
-					<TextArea>
-						Hard Skills - HTML, CSS, JS, React{' '}
-						<Span>Coding Tools - Github, NPM</Span>
-						<Span>
-							Design Tools - XD, Illustrator, Photoshop,
-							After effects, Fusion 360, Keyshot{' '}
-						</Span>
-						<Span>
-							Soft Skills - Project leading, Team work{' '}
-						</Span>
-					</TextArea>
-					<TextArea>
-						Send me an email!{' '}
-						<Span>
-							<Links href="mailto:martinlinden.sthlm@icloud.com">
-								martinlinden.sthlm@icloud.com
-							</Links>
-						</Span>
-					</TextArea>
-				</TextContainer>
+						</TextArea>
+					</TextContainer>
+				</MainContainer>
 			</React.Fragment>
 		);
 	}
