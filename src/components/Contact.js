@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import AboutMe from './about.svg';
+import { Link } from 'react-router-dom';
 
 const Title = styled.h1`
 	color: #f65744;
 	font-size: 60px;
 	font-weight: 900;
+	margin-bottom: 5%;
 `;
 
-const Text = styled.p`color: black;`;
+const Text = styled.p`
+	color: black;
+	max-width: 400px;
+`;
 
 const TextContainer = styled.div`
 	display: flex;
@@ -25,11 +30,26 @@ const Picture = styled.img`
 	height: 80%;
 `;
 
+const TextArea = styled.div`margin-bottom: 4%;`;
+
+const Skills = styled.div`margin-bottom: 4%;`;
+
 const Container = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	grid-area: pic;
+`;
+
+const Links = styled.a`
+	color: darkblue;
+	text-decoration: none;
+	font-weight: 600;
+`;
+const Span = styled.span`
+	display: block;
+	margin-top: 1%;
+	max-width: 400px;
 `;
 
 export default class Contact extends Component {
@@ -41,7 +61,43 @@ export default class Contact extends Component {
 				</Container>
 				<TextContainer>
 					<Title>Hi there!</Title>
-					<Text>Check out my github here:</Text>
+					<TextArea>
+						<Text>
+							I'm a front-end developer from Stockholm,
+							Sweden currently studying at KYH. Passionate
+							about developing smart and good looking
+							solutions for the web.
+						</Text>
+					</TextArea>
+					<TextArea>
+						<Text>
+							Check out my github here:
+							<Span>
+								<Links href="https://github.com/martin-linden">
+									github.com/martin-linden
+								</Links>
+							</Span>
+						</Text>
+					</TextArea>
+					<TextArea>
+						Hard Skills - HTML, CSS, JS, React{' '}
+						<Span>Coding Tools - Github, NPM</Span>
+						<Span>
+							Design Tools - XD, Illustrator, Photoshop,
+							After effects, Fusion 360, Keyshot{' '}
+						</Span>
+						<Span>
+							Soft Skills - Project leading, Team work{' '}
+						</Span>
+					</TextArea>
+					<TextArea>
+						Send me an email!{' '}
+						<Span>
+							<Links href="mailto:martinlinden.sthlm@icloud.com">
+								martinlinden.sthlm@icloud.com
+							</Links>
+						</Span>
+					</TextArea>
 				</TextContainer>
 			</React.Fragment>
 		);

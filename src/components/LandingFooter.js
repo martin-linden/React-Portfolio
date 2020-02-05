@@ -14,6 +14,11 @@ const Container = styled.div`
 	grid-area: landingFooter;
 	margin-right: 5%;
 	font-weight: 500;
+
+	@media (max-width: 510px) {
+		//small-screen
+		align-items: center;
+	}
 `;
 
 export default class LandingFooter extends Component {

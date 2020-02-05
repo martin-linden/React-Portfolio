@@ -1,17 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-const FirstTitle = styled.h1`
-	display: block;
-	/* margin-top: 10px;
-	margin-bottom: 10px; */
-	/* background-color: #868686; */
-	color: #f15c5c;
-	font-size: 40px;
-	font-weight: 900;
-	padding: 1%;
-`;
-
 const Title = styled.h1`
 	display: block;
 	margin-top: 0;
@@ -19,6 +8,10 @@ const Title = styled.h1`
 	color: #f65744;
 	font-size: 70px;
 	font-weight: 300;
+	@media (max-width: 720px) {
+		//medium-screen
+		font-size: 45px;
+	}
 `;
 const Title2 = styled.h1`
 	display: block;
@@ -27,6 +20,10 @@ const Title2 = styled.h1`
 	color: #2f4858;
 	font-size: 70px;
 	font-weight: 300;
+	@media (max-width: 720px) {
+		//medium-screen
+		font-size: 45px;
+	}
 `;
 
 const TitleContainer = styled.div`
@@ -69,6 +66,9 @@ const Container = styled.div`
 	align-items: center;
 	/* background: white; */
 	grid-area: article;
+
+	@media (max-width: 720px) {
+	}
 `;
 
 /* const Span = styled.span`color: #f65744;`; */

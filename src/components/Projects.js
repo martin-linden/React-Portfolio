@@ -48,10 +48,10 @@ export default class Projects extends Component {
 			<React.Fragment>
 				<TextContainer>
 					<TextLayout>
-						<Title>PROJECT IMAGE GALLERY</Title>
+						<Title>PROJECT IMAGE GALLERY (In progress)</Title>
 						<Text>
-							Below is a image gallery of my existing
-							projects.
+							{/* Below is a image gallery of my existing
+							projects. */}
 						</Text>
 					</TextLayout>
 				</TextContainer>

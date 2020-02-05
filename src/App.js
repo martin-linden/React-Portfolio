@@ -20,7 +20,7 @@ import ImageGallery from './components/ImageGallery';
 // Layout
 const LandingLayout = styled.div`
 	background: white;
-	height: 100vh;
+	min-height: 100vh;
 	max-width: 100vw;
 	display: grid;
 	grid-template-columns: 1fr 60%;
@@ -28,8 +28,21 @@ const LandingLayout = styled.div`
 	grid-template-areas: "header header" "intro article"
 		"landingFooter landingFooter";
 
-	@media (max-width: 700px) {
-		//ipad
+	@media (max-width: 720px) {
+		//medium-screen
+		grid-template-columns: 1fr 1fr;
+	}
+	@media (max-width: 510px) {
+		//small-screen
+		grid-template-columns: 1fr;
+		grid-template-rows: 100px minmax(100px, 1fr) 1fr 100px;
+		grid-template-areas: "header header" "intro intro"
+			"article article" "landingFooter landingFooter";
+	}
+	@supports (-webkit-appearance: none) {
+		.os-android & {
+			min-height: calc(100vh - 56px);
+		}
 	}
 `;
 
@@ -40,18 +53,32 @@ const ProjectLayout = styled.div`
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr;
 	grid-template-areas: "about picture";
+
+	@media (max-width: 720px) {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
+		grid-template-areas: "picture" "about";
+	}
 `;
+
+/* // We listen to the resize event
+window.addEventListener('resize', () => {
+	// We execute the same script as before
+	let vh = window.innerHeight * 0.01;
+	document.documentElement.style.setProperty('--vh', `${vh}px`);
+}); */
 
 const ContactLayout = styled.div`
 	min-height: 100vh;
+	/* height: calc(var(--vh, 1vh) * 100); */
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 100px 1fr;
 	grid-template-areas: "header header" "pic contact";
 `;
 const ImageGalleryLayout = styled.div`
-	height: 200px;
-	max-width: 100vw;
+	height: auto;
+	width: auto;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr;
@@ -78,9 +105,6 @@ function App() {
 					<ProjectLayout>
 						<Projects />
 					</ProjectLayout>
-					<ImageGalleryLayout>
-						<ImageGallery />
-					</ImageGalleryLayout>
 				</Route>
 			</Switch>
 		</Router>

@@ -12,6 +12,14 @@ const FirstTitle = styled.h1`
 	padding-left: 10px;
 	padding-right: 10px;
 	font-weight: 300;
+	@media (max-width: 720px) {
+		//medium-screen
+		font-size: 30px;
+	}
+	@media (max-width: 510px) {
+		//small-screen
+		/* font-size: 20px; */
+	}
 `;
 const FirstTitle2 = styled.h1`
 	margin-top: 10px;
@@ -24,6 +32,14 @@ const FirstTitle2 = styled.h1`
 	padding-right: 10px;
 	margin-left: 10px;
 	font-weight: 300;
+	@media (max-width: 720px) {
+		//medium-screen
+		font-size: 30px;
+	}
+	@media (max-width: 510px) {
+		//small-screen
+		/* font-size: 20px; */
+	}
 `;
 
 const FirstTitleContainer = styled.div`display: flex;`;
@@ -39,6 +55,10 @@ const Title = styled.h1`
 	padding-left: 10px;
 	padding-right: 10px;
 	font-weight: 300;
+	@media (max-width: 720px) {
+		//medium-screen
+		font-size: 60px;
+	}
 `;
 
 const Title2 = styled.h1`
@@ -52,6 +72,10 @@ const Title2 = styled.h1`
 	padding-left: 10px;
 	padding-right: 10px;
 	font-weight: 300;
+	@media (max-width: 720px) {
+		//medium-screen
+		font-size: 60px;
+	}
 `;
 const TextContainer = styled.div`
 	display: flex;
@@ -66,6 +90,11 @@ const Container = styled.div`
 	justify-content: center;
 	align-items: flex-end;
 	grid-area: intro;
+
+	@media (max-width: 720px) {
+		//phone
+		align-items: center;
+	}
 `;
 
 export default class Intro extends Component {
