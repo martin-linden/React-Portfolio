@@ -35,11 +35,11 @@ const Picture = styled.img`
 	display: flex;
 	flex-direction: row;
 	align-items: flex-end;
-	height: 80%;
+	height: 500px;
 
 	@media (max-width: 780px) {
 		//medium-screen
-		height: 50%;
+		height: 300px;
 	}
 
 	@media (max-width: 618px) {

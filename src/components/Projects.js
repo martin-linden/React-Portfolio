@@ -19,7 +19,7 @@ const Picture = styled.img`
 	display: flex;
 	flex-direction: row;
 	align-items: flex-end;
-	height: 80%;
+	height: 370px;
 `;
 const PictureContainer = styled.div`
 	display: flex;
