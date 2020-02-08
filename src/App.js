@@ -1,21 +1,15 @@
 import React from 'react';
 import './main.scss';
-import Main from './components/Main';
 import Header from './components/Header';
 import Article from './components/Article';
 import styled from 'styled-components';
 import LandingFooter from './components/LandingFooter';
 import Contact from './components/Contact';
 import Intro from './components/Intro';
-import Intro2 from './components/Intro2';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import '../src/App.css';
 import '../src/main.scss';
-import Footer from './components/Footer';
-import CarouselComponent from './components/CarouselComponent';
 import Projects from './components/Projects';
-import ImageGallery from './components/ImageGallery';
 
 // Layout
 const LandingLayout = styled.div`
@@ -51,7 +45,7 @@ const ProjectLayout = styled.div`
 	height: 400px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr;
+	grid-template-rows: 400px;
 	grid-template-areas: "about picture";
 
 	@media (max-width: 720px) {
@@ -83,7 +77,7 @@ const ContactLayout = styled.div`
 			"landingFooter landingFooter";
 	}
 `;
-const ImageGalleryLayout = styled.div`
+/* const ImageGalleryLayout = styled.div`
 	height: auto;
 	width: auto;
 	display: grid;
@@ -91,7 +85,7 @@ const ImageGalleryLayout = styled.div`
 	grid-template-rows: 1fr;
 	grid-template-areas: "kyh kyh2";
 `;
-
+ */
 function App() {
 	return (
 		<Router>
@@ -120,12 +114,3 @@ function App() {
 }
 
 export default App;
-
-const Landing = () => (
-	<React.Fragment>
-		<Main />
-		<Article />
-	</React.Fragment>
-);
-
-//test

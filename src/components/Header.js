@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import logo from './logo.svg';
+import logo from '../images/logo.svg';
 import { NavLink as Link } from 'react-router-dom';
 
 const Logo = styled.img`
@@ -14,6 +14,7 @@ const Styledlink = styled(Link)`
 opacity: 80%
 color: black;
 text-decoration: none;
+margin-right: 10px;
 &:hover {
 	background-color: #2f4858;
 	color: white;
@@ -22,8 +23,7 @@ text-decoration: none;
 &.active {
 	opacity: 100%;
 	text-decoration: underline;
-	color: white
-	background: #f65744; 
+	color: #f65744;
 	padding: 1%;
 }
 `;
@@ -52,7 +52,7 @@ export default class Header extends Component {
 	render() {
 		return (
 			<Container>
-				<Logo src={logo} alt="test" />
+				<Logo src={logo} alt="logotype" />
 				<LinkContainer>
 					<Styledlink to="/" exact>
 						HOME
