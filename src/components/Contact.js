@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import AboutMe from '../images/about.svg';
-import { Link } from 'react-router-dom';
 
 const Title = styled.h1`
 	color: #f65744;
@@ -51,8 +50,6 @@ const Picture = styled.img`
 
 const TextArea = styled.div`margin-bottom: 4%;`;
 
-const Skills = styled.div`margin-bottom: 4%;`;
-
 const Container = styled.div`
 	display: flex;
 	justify-content: center;
@@ -76,7 +73,10 @@ export default class Contact extends Component {
 		return (
 			<React.Fragment>
 				<Container>
-					<Picture src={AboutMe} />
+					<Picture
+						src={AboutMe}
+						alt="Martin standing on a mountain"
+					/>
 				</Container>
 				<MainContainer>
 					<TextContainer>

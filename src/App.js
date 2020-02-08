@@ -45,7 +45,7 @@ const ProjectLayout = styled.div`
 	height: 400px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr;
+	grid-template-rows: 400px;
 	grid-template-areas: "about picture";
 
 	@media (max-width: 720px) {
@@ -77,7 +77,7 @@ const ContactLayout = styled.div`
 			"landingFooter landingFooter";
 	}
 `;
-const ImageGalleryLayout = styled.div`
+/* const ImageGalleryLayout = styled.div`
 	height: auto;
 	width: auto;
 	display: grid;
@@ -85,7 +85,7 @@ const ImageGalleryLayout = styled.div`
 	grid-template-rows: 1fr;
 	grid-template-areas: "kyh kyh2";
 `;
-
+ */
 function App() {
 	return (
 		<Router>

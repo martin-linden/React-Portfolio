@@ -19,7 +19,7 @@ const Picture = styled.img`
 	display: flex;
 	flex-direction: row;
 	align-items: flex-end;
-	height: 370px;
+	height: auto;
 `;
 const PictureContainer = styled.div`
 	display: flex;
@@ -56,7 +56,10 @@ export default class Projects extends Component {
 					</TextLayout>
 				</TextContainer>
 				<PictureContainer>
-					<Picture src={computer} />
+					<Picture
+						src={computer}
+						alt="illustration of man siting att computer desk"
+					/>
 				</PictureContainer>
 			</React.Fragment>
 		);
