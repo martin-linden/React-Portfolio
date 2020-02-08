@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import logo from './logo.svg';
+import logo from '../images/logo.svg';
 import { NavLink as Link } from 'react-router-dom';
 
 const Logo = styled.img`

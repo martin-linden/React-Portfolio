@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import AboutMe from './about.svg';
+import AboutMe from '../images/about.svg';
 import { Link } from 'react-router-dom';
 
 const Title = styled.h1`

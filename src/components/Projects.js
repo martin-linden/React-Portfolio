@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import computer from './projects.svg';
+import computer from '../images/projects.svg';
 
 const Title = styled.h3`
 	color: #2f4858;

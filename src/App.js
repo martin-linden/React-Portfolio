@@ -1,21 +1,15 @@
 import React from 'react';
 import './main.scss';
-import Main from './components/Main';
 import Header from './components/Header';
 import Article from './components/Article';
 import styled from 'styled-components';
 import LandingFooter from './components/LandingFooter';
 import Contact from './components/Contact';
 import Intro from './components/Intro';
-import Intro2 from './components/Intro2';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import '../src/App.css';
 import '../src/main.scss';
-import Footer from './components/Footer';
-import CarouselComponent from './components/CarouselComponent';
 import Projects from './components/Projects';
-import ImageGallery from './components/ImageGallery';
 
 // Layout
 const LandingLayout = styled.div`
@@ -120,10 +114,3 @@ function App() {
 }
 
 export default App;
-
-const Landing = () => (
-	<React.Fragment>
-		<Main />
-		<Article />
-	</React.Fragment>
-);

@@ -38,17 +38,6 @@ const TextContainer = styled.div`
 	align-items: flex-start;
 `;
 
-const IntroText = styled.p`
-	color: black;
-	max-width: 350px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	line-height: 150%;
-	border-left: #2f4858 2px solid;
-	padding-left: 10px;
-	transform: translateX(-10px);
-`;
-
 const Nav = styled.h4`
 	font-weight: 600;
 	margin-top: 15px;
