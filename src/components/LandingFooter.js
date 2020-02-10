@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import Weather from '../components/Weather';
 
 const City = styled.p`color: #f65744;`;
 const Country = styled.p`
@@ -27,6 +28,7 @@ export default class LandingFooter extends Component {
 			<Container>
 				<City>
 					STOCKHOLM, <Country>SWEDEN</Country>
+					<Weather />
 				</City>
 			</Container>
 		);
