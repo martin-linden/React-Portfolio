@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import Weather from '../components/Weather';
 
-const City = styled.p`
+const City = styled.div`
 	color: ${(props) => props.theme.primaryColor};
 	display: inline-block;
 `;
-const Country = styled.p`
+const Country = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;

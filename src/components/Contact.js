@@ -9,7 +9,7 @@ const Title = styled.h1`
 	margin-bottom: 5%;
 `;
 
-const Text = styled.p`
+const Text = styled.div`
 	color: black;
 	max-width: 400px;
 `;
