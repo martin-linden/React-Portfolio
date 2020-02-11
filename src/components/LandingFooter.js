@@ -2,8 +2,14 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import Weather from '../components/Weather';
 
-const City = styled.p`color: #f65744;`;
+const City = styled.p`
+	color: #f65744;
+	display: inline-block;
+`;
 const Country = styled.p`
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 	color: black;
 	margin-top: 1%;
 `;
@@ -27,8 +33,10 @@ export default class LandingFooter extends Component {
 		return (
 			<Container>
 				<City>
-					STOCKHOLM, <Country>SWEDEN</Country>
-					<Weather />
+					STOCKHOLM,
+					<Country>
+						SWEDEN <Weather />
+					</Country>
 				</City>
 			</Container>
 		);

@@ -1,5 +1,19 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 import { API_KEY, PATH_LOCATION, PATH_BASE } from '../constants/index';
+
+const Celcius = styled.p`
+	font-size: 12px;
+	color: black;
+	margin-left: 3px;
+`;
+
+const Temp = styled.p`
+	display: flex;
+	align-items: center;
+	color: #f65744;
+	font-size: 13px;
+`;
 
 export default class Weather extends Component {
 	constructor(props) {
@@ -28,9 +42,12 @@ export default class Weather extends Component {
 	render() {
 		console.log(this.state);
 		return (
-			<div>
-				{this.state.weather ? this.state.weather.main.temp : null}
-			</div>
+			<Temp>
+				{this.state.weather ? (
+					this.state.weather.main.temp
+				) : null}{' '}
+				<Celcius>°C</Celcius>
+			</Temp>
 		);
 	}
 }
