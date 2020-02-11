@@ -89,8 +89,8 @@ const ContactLayout = styled.div`
 function App() {
 	return (
 		<Router>
-			<Switch>
-				<ThemeProvider theme={theme}>
+			<ThemeProvider theme={theme}>
+				<Switch>
 					<Route path="/contact">
 						<ContactLayout>
 							<Header />
@@ -109,8 +109,8 @@ function App() {
 							<Projects />
 						</ProjectLayout>
 					</Route>
-				</ThemeProvider>
-			</Switch>
+				</Switch>
+			</ThemeProvider>
 		</Router>
 	);
 }
