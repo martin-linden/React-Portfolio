@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import AboutMe from '../images/about.svg';
+import AboutMe from '../images/about.png';
 
 const Title = styled.h1`
 	color: #f65744;
