@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Weather from '../components/Weather';
 
 const City = styled.p`
-	color: #f65744;
+	color: ${(props) => props.theme.primaryColor};
 	display: inline-block;
 `;
 const Country = styled.p`

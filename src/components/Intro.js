@@ -48,7 +48,7 @@ const Title = styled.h1`
 	display: block;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	background-color: #2f4858;
+	background-color: ${(props) => props.theme.secondaryColor};
 	color: white;
 	font-size: 75px;
 	padding: 1%;
@@ -65,7 +65,7 @@ const Title2 = styled.h1`
 	display: block;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	background-color: #f65744;
+	background-color: ${(props) => props.theme.primaryColor};
 	color: white;
 	font-size: 75px;
 	padding: 1%;

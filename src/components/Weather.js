@@ -11,7 +11,7 @@ const Celcius = styled.p`
 const Temp = styled.p`
 	display: flex;
 	align-items: center;
-	color: #f65744;
+	color: ${(props) => props.theme.primaryColor};
 	font-size: 13px;
 `;
 

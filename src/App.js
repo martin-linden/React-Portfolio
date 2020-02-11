@@ -1,5 +1,4 @@
 import React from 'react';
-import './main.scss';
 import Header from './components/Header';
 import Article from './components/Article';
 import styled from 'styled-components';
@@ -8,8 +7,9 @@ import Contact from './components/Contact';
 import Intro from './components/Intro';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import '../src/App.css';
-import '../src/main.scss';
 import Projects from './components/Projects';
+import theme from './assets/theme';
+import { ThemeProvider } from 'styled-components';
 
 // Layout
 const LandingLayout = styled.div`
@@ -90,24 +90,26 @@ function App() {
 	return (
 		<Router>
 			<Switch>
-				<Route path="/contact">
-					<ContactLayout>
-						<Header />
-						<Contact />
-						<LandingFooter />
-					</ContactLayout>
-				</Route>
-				<Route path="/">
-					<LandingLayout>
-						<Header />
-						<Intro />
-						<Article />
-						<LandingFooter />
-					</LandingLayout>
-					<ProjectLayout>
-						<Projects />
-					</ProjectLayout>
-				</Route>
+				<ThemeProvider theme={theme}>
+					<Route path="/contact">
+						<ContactLayout>
+							<Header />
+							<Contact />
+							<LandingFooter />
+						</ContactLayout>
+					</Route>
+					<Route path="/">
+						<LandingLayout>
+							<Header />
+							<Intro />
+							<Article />
+							<LandingFooter />
+						</LandingLayout>
+						<ProjectLayout>
+							<Projects />
+						</ProjectLayout>
+					</Route>
+				</ThemeProvider>
 			</Switch>
 		</Router>
 	);
