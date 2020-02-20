@@ -105,9 +105,9 @@ function App() {
 							<Article />
 							<LandingFooter />
 						</LandingLayout>
-						<ProjectLayout>
+						{/* <ProjectLayout>
 							<Projects />
-						</ProjectLayout>
+						</ProjectLayout> */}
 					</Route>
 				</Switch>
 			</ThemeProvider>
