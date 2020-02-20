@@ -3,13 +3,13 @@ import styled from 'styled-components';
 import AboutMe from '../images/about.png';
 
 const Title = styled.h1`
-	color: #f65744;
+	color: ${(props) => props.theme.primaryColor};
 	font-size: 60px;
 	font-weight: 900;
 	margin-bottom: 5%;
 `;
 
-const Text = styled.p`
+const Text = styled.div`
 	color: black;
 	max-width: 400px;
 `;

@@ -16,14 +16,14 @@ color: black;
 text-decoration: none;
 margin-right: 10px;
 &:hover {
-	background-color: #2f4858;
+	background-color: ${(props) => props.theme.secondaryColor};
 	color: white;
 	padding: 1%;
 }
 &.active {
 	opacity: 100%;
 	text-decoration: underline;
-	color: #f65744;
+	color: ${(props) => props.theme.primaryColor};
 	padding: 1%;
 }
 `;

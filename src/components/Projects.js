@@ -7,7 +7,7 @@ const Title = styled.h3`
 	margin-bottom: 10px;
 `;
 
-const Text = styled.p`
+const Text = styled.div`
 	color: black;
 	max-width: 350px;
 	/* line-height: 150%;

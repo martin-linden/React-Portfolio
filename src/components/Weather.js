@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { API_KEY, PATH_LOCATION, PATH_BASE } from '../constants/index';
 
-const Celcius = styled.p`
+const Celcius = styled.div`
 	font-size: 12px;
 	color: black;
 	margin-left: 3px;
 `;
 
-const Temp = styled.p`
+const Temp = styled.div`
 	display: flex;
 	align-items: center;
-	color: #f65744;
+	color: ${(props) => props.theme.primaryColor};
 	font-size: 13px;
 `;
 

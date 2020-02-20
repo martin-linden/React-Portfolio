@@ -5,7 +5,7 @@ const Title = styled.h1`
 	display: block;
 	margin-top: 0;
 	margin-bottom: 0;
-	color: #f65744;
+	color: ${(props) => props.theme.primaryColor};
 	font-size: 70px;
 	font-weight: 300;
 	@media (max-width: 720px) {
@@ -17,7 +17,7 @@ const Title2 = styled.h1`
 	display: block;
 	margin-top: 0;
 	margin-bottom: 0;
-	color: #2f4858;
+	color: ${(props) => props.theme.secondaryColor};
 	font-size: 70px;
 	font-weight: 300;
 	@media (max-width: 720px) {
@@ -43,7 +43,9 @@ const Nav = styled.h4`
 	margin-top: 15px;
 	/* content: ""; /* This is necessary for the pseudo element to work. */
 	width: 30%; /* Change this to whatever width you want. */
-	border-bottom: 2px solid #2f4858; /* This creates the border. Replace black with whatever color you want. */
+	border-bottom: 2px solid ${(props) =>
+			props.theme
+				.secondaryColor}; /* This creates the border. Replace black with whatever color you want. */
 	padding-bottom: 5px;
 	color: #434343;
 `;
