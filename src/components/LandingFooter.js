@@ -30,8 +30,8 @@ const Container = styled.div`
 const Grid = styled.div`
 	grid-column-start: 1;
 	grid-column-end: -1;
-	grid-row-start: 6;
-	grid-row-end: 6;
+	grid-row-start: 9;
+	grid-row-end: 9;
 `;
 
 export default class LandingFooter extends Component {

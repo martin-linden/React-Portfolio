@@ -51,8 +51,10 @@ const Nav = styled.h4`
 `;
 
 const Container = styled.div`
+	height: 100%;
+	width: 100%;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: center;
 	align-items: center;
 
@@ -61,10 +63,10 @@ const Container = styled.div`
 `;
 
 const Grid = styled.div`
-	grid-column-start: 5;
-	grid-column-end: 5;
-	grid-row-start: 3;
-	grid-row-end: 3;
+	grid-column-start: 7;
+	grid-column-end: 7;
+	grid-row-start: 5;
+	grid-row-end: 5;
 `;
 
 /* const Span = styled.span`color: #f65744;`; */

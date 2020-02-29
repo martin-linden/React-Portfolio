@@ -84,10 +84,12 @@ const TextContainer = styled.div`
 	align-items: flex-start;
 `;
 const Container = styled.div`
+	height: 100%;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: flex-end;
+	align-items: center;
 
 	@media (max-width: 720px) {
 		//phone
@@ -96,10 +98,10 @@ const Container = styled.div`
 `;
 
 const Grid = styled.div`
-	grid-column-start: 2;
-	grid-column-end: 2;
-	grid-row-start: 3;
-	grid-row-end: 3;
+	grid-column-start: 4;
+	grid-column-end: 4;
+	grid-row-start: 5;
+	grid-row-end: 5;
 `;
 
 export default class Intro extends Component {

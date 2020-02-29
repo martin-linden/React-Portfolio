@@ -47,7 +47,7 @@ const Container = styled.div`
 	justify-content: center;
 	align-items: center;
 	justify-content: space-between;
-	height: 10vh;
+	height: 12vh;
 `;
 
 /* const Grid = styled.div`

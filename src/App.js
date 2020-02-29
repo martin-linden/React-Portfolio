@@ -14,9 +14,9 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 const GridLayout = styled.div`
 	display: grid;
-	grid-template-columns: repeat(6, 1fr);
-	grid-template-rows: repeat(6, 1fr);
-	height: 90vh;
+	grid-template-columns: repeat(10, 1fr);
+	grid-template-rows: repeat(10, 1fr);
+	height: 88vh;
 `;
 
 function App() {
