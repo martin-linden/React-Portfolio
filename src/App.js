@@ -10,6 +10,7 @@ import '../src/App.css';
 import Projects from './components/Projects';
 import theme from './assets/theme';
 import { ThemeProvider } from 'styled-components';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 // Layout
 const LandingLayout = styled.div`
@@ -88,31 +89,38 @@ const ContactLayout = styled.div`
  */
 function App() {
 	return (
-		<Router>
-			<ThemeProvider theme={theme}>
-				<Switch>
-					<Route path="/contact">
-						<ContactLayout>
-							<Header />
-							<Contact />
-							<LandingFooter />
-						</ContactLayout>
-					</Route>
-					<Route path="/">
-						<LandingLayout>
-							<Header />
-							<Intro />
-							<Article />
-							<LandingFooter />
-						</LandingLayout>
-						{/* <ProjectLayout>
-							<Projects />
-						</ProjectLayout> */}
-					</Route>
-				</Switch>
-			</ThemeProvider>
-		</Router>
+		<ThemeProvider theme={theme}>
+			<Router>
+				<TransitionGroup>
+					<CSSTransition timeout={300} classNames="fade">
+						<Switch>
+							<Route exact path="/" component={Home} />
+							<Route
+								path="/contact"
+								component={ContactPage}
+							/>
+						</Switch>
+					</CSSTransition>
+				</TransitionGroup>
+			</Router>
+		</ThemeProvider>
 	);
 }
+
+const Home = () => (
+	<LandingLayout>
+		<Header />
+		<Intro />
+		<Article />
+		<LandingFooter />
+	</LandingLayout>
+);
+const ContactPage = () => (
+	<ContactLayout>
+		<Header />
+		<Contact />
+		<LandingFooter />
+	</ContactLayout>
+);
 
 export default App;
