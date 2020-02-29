@@ -90,19 +90,33 @@ const ContactLayout = styled.div`
 function App() {
 	return (
 		<ThemeProvider theme={theme}>
-			<Router>
-				<TransitionGroup>
-					<CSSTransition timeout={300} classNames="fade">
-						<Switch>
-							<Route exact path="/" component={Home} />
-							<Route
-								path="/contact"
-								component={ContactPage}
-							/>
-						</Switch>
-					</CSSTransition>
-				</TransitionGroup>
-			</Router>
+			<div className="page">
+				<Router>
+					<Route
+						render={({ location }) => (
+							<TransitionGroup>
+								<CSSTransition
+									key={location.key}
+									timeout={200}
+									classNames="fade"
+								>
+									<Switch location={location}>
+										<Route
+											exact
+											path="/"
+											component={Home}
+										/>
+										<Route
+											path="/contact"
+											component={ContactPage}
+										/>
+									</Switch>
+								</CSSTransition>
+							</TransitionGroup>
+						)}
+					/>
+				</Router>
+			</div>
 		</ThemeProvider>
 	);
 }
