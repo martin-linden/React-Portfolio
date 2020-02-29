@@ -43,10 +43,19 @@ const Container = styled.div`
 	left: 0;
 	right: 0; */
 	display: flex;
+	flex-direction: row;
+	justify-content: center;
 	align-items: center;
 	justify-content: space-between;
-	grid-area: header;
+	height: 10vh;
 `;
+
+/* const Grid = styled.div`
+	grid-column-start: 1;
+	grid-column-end: -1;
+	grid-row-start: 1;
+	grid-row-end: 2;
+`; */
 
 export default class Header extends Component {
 	render() {

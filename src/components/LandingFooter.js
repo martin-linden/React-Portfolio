@@ -18,7 +18,6 @@ const Container = styled.div`
 	display: flex;
 	justify-content: flex-end;
 	align-items: flex-start;
-	grid-area: landingFooter;
 	margin-right: 5%;
 	font-weight: 500;
 
@@ -28,17 +27,26 @@ const Container = styled.div`
 	}
 `;
 
+const Grid = styled.div`
+	grid-column-start: 1;
+	grid-column-end: -1;
+	grid-row-start: 6;
+	grid-row-end: 6;
+`;
+
 export default class LandingFooter extends Component {
 	render() {
 		return (
-			<Container>
-				<City>
-					STOCKHOLM,
-					<Country>
-						SWEDEN <Weather />
-					</Country>
-				</City>
-			</Container>
+			<Grid>
+				<Container>
+					<City>
+						STOCKHOLM,
+						<Country>
+							SWEDEN <Weather />
+						</Country>
+					</City>
+				</Container>
+			</Grid>
 		);
 	}
 }

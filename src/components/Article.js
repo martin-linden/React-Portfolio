@@ -55,11 +55,16 @@ const Container = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	/* background: white; */
-	grid-area: article;
 
 	@media (max-width: 720px) {
 	}
+`;
+
+const Grid = styled.div`
+	grid-column-start: 5;
+	grid-column-end: 5;
+	grid-row-start: 3;
+	grid-row-end: 3;
 `;
 
 /* const Span = styled.span`color: #f65744;`; */
@@ -67,15 +72,17 @@ const Container = styled.div`
 export default class Article extends Component {
 	render() {
 		return (
-			<Container>
-				<TextContainer>
-					<TitleContainer>
-						<Title>Front-End</Title>
-						<Title2>Developer</Title2>
-					</TitleContainer>
-					<Nav>PROJECTS</Nav>
-				</TextContainer>
-			</Container>
+			<Grid>
+				<Container>
+					<TextContainer>
+						<TitleContainer>
+							<Title>Front-End</Title>
+							<Title2>Developer</Title2>
+						</TitleContainer>
+						<Nav>PROJECTS</Nav>
+					</TextContainer>
+				</Container>
+			</Grid>
 		);
 	}
 }

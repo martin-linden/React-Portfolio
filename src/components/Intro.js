@@ -82,14 +82,12 @@ const TextContainer = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;
-	grid-area: intro;
 `;
 const Container = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-end;
-	grid-area: intro;
 
 	@media (max-width: 720px) {
 		//phone
@@ -97,19 +95,28 @@ const Container = styled.div`
 	}
 `;
 
+const Grid = styled.div`
+	grid-column-start: 2;
+	grid-column-end: 2;
+	grid-row-start: 3;
+	grid-row-end: 3;
+`;
+
 export default class Intro extends Component {
 	render() {
 		return (
-			<Container>
-				<TextContainer>
-					<FirstTitleContainer>
-						<FirstTitle>Hi! </FirstTitle>
-						<FirstTitle2>I'm </FirstTitle2>
-					</FirstTitleContainer>
-					<Title>Martin</Title>
-					<Title2>Lindén</Title2>
-				</TextContainer>
-			</Container>
+			<Grid>
+				<Container>
+					<TextContainer>
+						<FirstTitleContainer>
+							<FirstTitle>Hi! </FirstTitle>
+							<FirstTitle2>I'm </FirstTitle2>
+						</FirstTitleContainer>
+						<Title>Martin</Title>
+						<Title2>Lindén</Title2>
+					</TextContainer>
+				</Container>
+			</Grid>
 		);
 	}
 }
