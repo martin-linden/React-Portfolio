@@ -43,10 +43,10 @@ export default class Weather extends Component {
 		console.log(this.state);
 		return (
 			<Temp>
-				{this.state.weather ? (
+				{/* {this.state.weather ? (
 					this.state.weather.main.temp
 				) : null}{' '}
-				<Celcius>°C</Celcius>
+				<Celcius>°C</Celcius> */}
 			</Temp>
 		);
 	}
