@@ -30,7 +30,7 @@ function App() {
 							<TransitionGroup>
 								<CSSTransition
 									key={location.key}
-									timeout={200}
+									timeout={500}
 									classNames="fade"
 								>
 									<GridLayout>
@@ -63,6 +63,10 @@ const Home = () => (
 		<LandingFooter />
 	</React.Fragment>
 );
-const ContactPage = () => <React.Fragment />;
+const ContactPage = () => (
+	<React.Fragment>
+		<Contact />
+	</React.Fragment>
+);
 
 export default App;

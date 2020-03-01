@@ -7,7 +7,7 @@ const Logo = styled.img`
 	display: flex;
 	justify-content: flex-start;
 	height: 50px;
-	margin-left: 2%;
+	margin-left: 18px;
 `;
 
 const Styledlink = styled(Link)`

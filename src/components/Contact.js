@@ -12,6 +12,10 @@ const Title = styled.h1`
 const Text = styled.div`
 	color: black;
 	max-width: 400px;
+
+	@media (max-width: 780px) {
+		max-width: 400px;
+	}
 `;
 
 const TextContainer = styled.div`
@@ -23,6 +27,8 @@ const TextContainer = styled.div`
 `;
 
 const MainContainer = styled.div`
+	height: 100%;
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -38,23 +44,27 @@ const Picture = styled.img`
 
 	@media (max-width: 780px) {
 		//medium-screen
-		height: 300px;
-	}
-
-	@media (max-width: 618px) {
-		//small-screen
 		display: none;
 		pointer-events: none;
 	}
 `;
 
-const TextArea = styled.div`margin-bottom: 4%;`;
+const TextArea = styled.div`
+	margin-bottom: 4%;
+	font-size: 17px;
+`;
 
 const Container = styled.div`
+	height: 100%;
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	grid-area: pic;
+	@media (max-width: 780px) {
+		//medium-screen
+		display: none;
+		pointer-events: none;
+	}
 `;
 
 const Links = styled.a`
@@ -68,59 +78,84 @@ const Span = styled.span`
 	max-width: 400px;
 `;
 
+const Grid = styled.div`
+	grid-column-start: 1;
+	grid-column-end: -1;
+	grid-row-start: 5;
+	grid-row-end: 5;
+	@media (max-width: 780px) {
+		//medium-screen
+		grid-column-start: 2;
+		grid-column-end: 10;
+		grid-row-start: 1;
+		grid-row-end: 9;
+	}
+`;
+
+const FlexWrpper = styled.div`
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+`;
+
 export default class Contact extends Component {
 	render() {
 		return (
-			<React.Fragment>
-				<Container>
-					<Picture
-						src={AboutMe}
-						alt="Martin standing on a mountain"
-					/>
-				</Container>
-				<MainContainer>
-					<TextContainer>
-						<Title>Hi there!</Title>
-						<TextArea>
-							<Text>
-								I'm a front-end developer from Stockholm,
-								Sweden currently studying at KYH.
-								Passionate about developing smart and good
-								looking solutions for the web.
-							</Text>
-						</TextArea>
-						<TextArea>
-							<Text>
-								Check out my github here:
+			<Grid>
+				<FlexWrpper>
+					<Container>
+						<Picture
+							src={AboutMe}
+							alt="Martin standing on a mountain"
+						/>
+					</Container>
+					<MainContainer>
+						<TextContainer>
+							<Title>Hello!</Title>
+							<TextArea>
+								<Text>
+									I'm a front-end developer from
+									Stockholm, Sweden currently studying at
+									KYH. Passionate about developing smart
+									and good looking solutions for the web.
+								</Text>
+							</TextArea>
+							<TextArea>
+								<Text>
+									Check out my github here:
+									<Span>
+										<Links href="https://github.com/martin-linden">
+											github.com/martin-linden
+										</Links>
+									</Span>
+								</Text>
+							</TextArea>
+							<TextArea>
+								Hard Skills - HTML, CSS, JS, React{' '}
+								<Span>Coding Tools - Github, NPM</Span>
 								<Span>
-									<Links href="https://github.com/martin-linden">
-										github.com/martin-linden
+									Design Tools - XD, Illustrator,
+									Photoshop, After effects, Fusion 360,
+									Keyshot{' '}
+								</Span>
+								<Span>
+									Soft Skills - Project leading, Team
+									work{' '}
+								</Span>
+							</TextArea>
+							<TextArea>
+								Send me an email!{' '}
+								<Span>
+									<Links href="mailto:martinlinden.sthlm@icloud.com">
+										martinlinden.sthlm@icloud.com
 									</Links>
 								</Span>
-							</Text>
-						</TextArea>
-						<TextArea>
-							Hard Skills - HTML, CSS, JS, React{' '}
-							<Span>Coding Tools - Github, NPM</Span>
-							<Span>
-								Design Tools - XD, Illustrator, Photoshop,
-								After effects, Fusion 360, Keyshot{' '}
-							</Span>
-							<Span>
-								Soft Skills - Project leading, Team work{' '}
-							</Span>
-						</TextArea>
-						<TextArea>
-							Send me an email!{' '}
-							<Span>
-								<Links href="mailto:martinlinden.sthlm@icloud.com">
-									martinlinden.sthlm@icloud.com
-								</Links>
-							</Span>
-						</TextArea>
-					</TextContainer>
-				</MainContainer>
-			</React.Fragment>
+							</TextArea>
+						</TextContainer>
+					</MainContainer>
+				</FlexWrpper>
+			</Grid>
 		);
 	}
 }
