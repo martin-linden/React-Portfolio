@@ -115,6 +115,7 @@ export default class Contact extends Component {
 									KYH. Passionate about developing smart
 									and good looking solutions for the web.
 								</Text>
+								<br />
 							</TextArea>
 							<TextArea>
 								<Text>
@@ -127,6 +128,7 @@ export default class Contact extends Component {
 								</Text>
 							</TextArea>
 							<TextArea>
+								<br />
 								Hard Skills - HTML, CSS, JS, React{' '}
 								<Span>Coding Tools - Github, NPM</Span>
 								<Span>
@@ -138,6 +140,7 @@ export default class Contact extends Component {
 									Soft Skills - Project leading, Team
 									work{' '}
 								</Span>
+								<br />
 							</TextArea>
 							<TextArea>
 								Send me an email!{' '}
