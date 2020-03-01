@@ -6,7 +6,7 @@ const Title = styled.h1`
 	color: ${(props) => props.theme.primaryColor};
 	font-size: 60px;
 	font-weight: 900;
-	margin-bottom: 5%;
+	margin-bottom: 10%;
 `;
 
 const Text = styled.div`
@@ -49,10 +49,7 @@ const Picture = styled.img`
 	}
 `;
 
-const TextArea = styled.div`
-	margin-bottom: 4%;
-	font-size: 17px;
-`;
+const TextArea = styled.div`font-size: 17px;`;
 
 const Container = styled.div`
 	height: 100%;
@@ -93,8 +90,6 @@ const Grid = styled.div`
 `;
 
 const FlexWrpper = styled.div`
-	width: 100%;
-	height: 100%;
 	display: flex;
 	align-items: center;
 `;

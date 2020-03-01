@@ -98,8 +98,7 @@ const TextContainer = styled.div`
 	align-items: flex-start;
 	@media (max-width: 610px) {
 		//phone
-		flex-direction: row;
-		align-items: flex-end;
+		display: none;
 	}
 `;
 const Container = styled.div`

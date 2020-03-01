@@ -76,6 +76,17 @@ const Grid = styled.div`
 	}
 `;
 
+const Name = styled.h3`
+	@media (min-width: 610px) {
+		display: none;
+	}
+	@media (max-width: 610px) {
+		//phone
+		color: ${(props) => props.theme.secondaryColor};
+		margin-left: 2px;
+	}
+`;
+
 /* const Span = styled.span`color: #f65744;`; */
 
 export default class Article extends Component {
@@ -85,6 +96,7 @@ export default class Article extends Component {
 				<Container>
 					<TextContainer>
 						<TitleContainer>
+							<Name>Martin Lindén</Name>
 							<Title>Front-End</Title>
 							<Title2>Developer</Title2>
 						</TitleContainer>
