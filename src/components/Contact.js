@@ -112,7 +112,7 @@ export default class Contact extends Component {
 					</Container>
 					<MainContainer>
 						<TextContainer>
-							<Title>Hello!</Title>
+							<Title>Hej!</Title>
 							<TextArea>
 								<Text>
 									I'm a front-end developer from

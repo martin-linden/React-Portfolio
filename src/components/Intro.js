@@ -102,6 +102,13 @@ const Grid = styled.div`
 	grid-column-end: 4;
 	grid-row-start: 5;
 	grid-row-end: 5;
+	@media (max-width: 610px) {
+		//phone
+		grid-column-start: 2;
+		grid-column-end: 10;
+		grid-row-start: 2;
+		grid-row-end: 2;
+	}
 `;
 
 export default class Intro extends Component {

@@ -16,7 +16,7 @@ color: black;
 text-decoration: none;
 margin-right: 10px;
 &:hover {
-	background-color: ${(props) => props.theme.secondaryColor};
+	/* background-color: ${(props) => props.theme.secondaryColor}; */
 	color: white;
 	padding: 1%;
 }
@@ -24,7 +24,7 @@ margin-right: 10px;
 	opacity: 100%;
 	text-decoration: underline;
 	color: ${(props) => props.theme.primaryColor};
-	padding: 1%;
+	padding: 1%; */
 }
 `;
 
