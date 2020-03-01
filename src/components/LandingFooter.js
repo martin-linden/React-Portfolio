@@ -32,6 +32,14 @@ const Grid = styled.div`
 	grid-column-end: -1;
 	grid-row-start: 9;
 	grid-row-end: 9;
+
+	@media (max-width: 610px) {
+		//phone
+		grid-column-start: 1;
+		grid-column-end: -1;
+		grid-row-start: 8;
+		grid-row-end: 8;
+	}
 `;
 
 export default class LandingFooter extends Component {

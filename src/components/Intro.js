@@ -12,15 +12,18 @@ const FirstTitle = styled.h1`
 	padding-left: 10px;
 	padding-right: 10px;
 	font-weight: 300;
-	@media (max-width: 720px) {
+	@media (max-width: 740px) {
 		//medium-screen
 		font-size: 30px;
 	}
-	@media (max-width: 510px) {
-		//small-screen
-		/* font-size: 20px; */
+	@media (max-width: 610px) {
+		/* font-size: 20px;
+		padding-top: 3%;
+		padding-bottom: 3%; */
+		display: none;
 	}
 `;
+
 const FirstTitle2 = styled.h1`
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -32,13 +35,16 @@ const FirstTitle2 = styled.h1`
 	padding-right: 10px;
 	margin-left: 10px;
 	font-weight: 300;
-	@media (max-width: 720px) {
+	@media (max-width: 740px) {
 		//medium-screen
 		font-size: 30px;
 	}
-	@media (max-width: 510px) {
-		//small-screen
-		/* font-size: 20px; */
+	@media (max-width: 610px) {
+		/* font-size: 20px;
+		margin-left: 2px;
+		padding-top: 3%;
+		padding-bottom: 3%;  */
+		display: none;
 	}
 `;
 
@@ -55,9 +61,12 @@ const Title = styled.h1`
 	padding-left: 10px;
 	padding-right: 10px;
 	font-weight: 300;
-	@media (max-width: 720px) {
+	@media (max-width: 740px) {
 		//medium-screen
 		font-size: 60px;
+	}
+	@media (max-width: 610px) {
+		font-size: 20px;
 	}
 `;
 
@@ -72,16 +81,26 @@ const Title2 = styled.h1`
 	padding-left: 10px;
 	padding-right: 10px;
 	font-weight: 300;
-	@media (max-width: 720px) {
+	@media (max-width: 740px) {
 		//medium-screen
 		font-size: 60px;
 	}
+	@media (max-width: 610px) {
+		font-size: 20px;
+		margin-left: 3px;
+	}
 `;
+
 const TextContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;
+	@media (max-width: 610px) {
+		//phone
+		flex-direction: row;
+		align-items: flex-end;
+	}
 `;
 const Container = styled.div`
 	height: 100%;
@@ -91,7 +110,7 @@ const Container = styled.div`
 	justify-content: center;
 	align-items: center;
 
-	@media (max-width: 720px) {
+	@media (max-width: 740px) {
 		//phone
 		align-items: center;
 	}
@@ -104,10 +123,11 @@ const Grid = styled.div`
 	grid-row-end: 5;
 	@media (max-width: 610px) {
 		//phone
-		grid-column-start: 2;
-		grid-column-end: 10;
-		grid-row-start: 2;
-		grid-row-end: 2;
+		grid-column-start: 1;
+		grid-column-end: -1;
+		grid-row-start: 3;
+		grid-row-end: 3;
+		/* display: none; */
 	}
 `;
 

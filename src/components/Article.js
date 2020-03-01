@@ -63,8 +63,8 @@ const Container = styled.div`
 `;
 
 const Grid = styled.div`
-	grid-column-start: 2;
-	grid-column-end: 10;
+	grid-column-start: 7;
+	grid-column-end: 7;
 	grid-row-start: 5;
 	grid-row-end: 5;
 	@media (max-width: 610px) {
@@ -72,7 +72,7 @@ const Grid = styled.div`
 		grid-column-start: 2;
 		grid-column-end: 10;
 		grid-row-start: 4;
-		grid-row-end: 5;
+		grid-row-end: 4;
 	}
 `;
 

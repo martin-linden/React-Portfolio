@@ -17,14 +17,14 @@ text-decoration: none;
 margin-right: 10px;
 &:hover {
 	/* background-color: ${(props) => props.theme.secondaryColor}; */
-	color: white;
+	opacity: 60%
 	padding: 1%;
 }
 &.active {
 	opacity: 100%;
 	text-decoration: underline;
 	color: ${(props) => props.theme.primaryColor};
-	padding: 1%; */
+	padding: 1%; 
 }
 `;
 
@@ -47,7 +47,7 @@ const Container = styled.div`
 	justify-content: center;
 	align-items: center;
 	justify-content: space-between;
-	height: 12vh;
+	min-height: 12vh;
 `;
 
 /* const Grid = styled.div`
