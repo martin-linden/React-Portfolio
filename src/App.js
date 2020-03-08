@@ -16,7 +16,7 @@ const GridLayout = styled.div`
 	display: grid;
 	grid-template-columns: repeat(10, 1fr);
 	grid-template-rows: repeat(10, 1fr);
-	height: 88vh;
+	height: calc(88vh - 30px);
 `;
 
 function App() {
@@ -24,32 +24,34 @@ function App() {
 		<div className="page">
 			<ThemeProvider theme={theme}>
 				<Router>
-					<Route path="/" component={Header} />
-					<Route
-						render={({ location }) => (
-							<TransitionGroup>
-								<CSSTransition
-									key={location.key}
-									timeout={500}
-									classNames="fade"
-								>
-									<GridLayout>
-										<Switch location={location}>
-											<Route
-												exact
-												path="/"
-												component={Home}
-											/>
-											<Route
-												path="/contact"
-												component={ContactPage}
-											/>
-										</Switch>
-									</GridLayout>
-								</CSSTransition>
-							</TransitionGroup>
-						)}
-					/>
+					<div className="test">
+						<Route path="/" component={Header} />
+						<Route
+							render={({ location }) => (
+								<TransitionGroup>
+									<CSSTransition
+										key={location.key}
+										timeout={500}
+										classNames="fade"
+									>
+										<GridLayout>
+											<Switch location={location}>
+												<Route
+													exact
+													path="/"
+													component={Home}
+												/>
+												<Route
+													path="/contact"
+													component={ContactPage}
+												/>
+											</Switch>
+										</GridLayout>
+									</CSSTransition>
+								</TransitionGroup>
+							)}
+						/>
+					</div>
 				</Router>
 			</ThemeProvider>
 		</div>

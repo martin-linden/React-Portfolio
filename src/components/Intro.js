@@ -5,7 +5,7 @@ const FirstTitle = styled.h1`
 	display: block;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	background-color: #868686;
+	background-color: ${(props) => props.theme.primaryColor};
 	color: white;
 	font-size: 45px;
 	padding: 1%;
@@ -27,7 +27,7 @@ const FirstTitle = styled.h1`
 const FirstTitle2 = styled.h1`
 	margin-top: 10px;
 	margin-bottom: 10px;
-	background-color: #f0715e;
+	background-color: ${(props) => props.theme.primaryColor};
 	color: white;
 	font-size: 45px;
 	padding: 1%;
@@ -54,7 +54,7 @@ const Title = styled.h1`
 	display: block;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	background-color: ${(props) => props.theme.secondaryColor};
+	background-color: ${(props) => props.theme.primaryColor};
 	color: white;
 	font-size: 75px;
 	padding: 1%;
@@ -137,7 +137,7 @@ export default class Intro extends Component {
 				<Container>
 					<TextContainer>
 						<FirstTitleContainer>
-							<FirstTitle>Hi! </FirstTitle>
+							<FirstTitle>Hi!</FirstTitle>
 							<FirstTitle2>I'm </FirstTitle2>
 						</FirstTitleContainer>
 						<Title>Martin</Title>

@@ -11,19 +11,19 @@ const Logo = styled.img`
 `;
 
 const Styledlink = styled(Link)`
-opacity: 80%
-color: black;
+color: ${(props) => props.theme.secondaryColor};
 text-decoration: none;
 margin-right: 10px;
 &:hover {
 	/* background-color: ${(props) => props.theme.secondaryColor}; */
 	opacity: 60%
 	padding: 1%;
+	color: black;
 }
 &.active {
 	opacity: 100%;
 	text-decoration: underline;
-	color: ${(props) => props.theme.primaryColor};
+	color: ${(props) => props.theme.secondaryColor};
 	padding: 1%; 
 }
 `;

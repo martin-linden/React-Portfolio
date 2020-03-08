@@ -5,7 +5,7 @@ const Title = styled.h1`
 	display: block;
 	margin-top: 0;
 	margin-bottom: 0;
-	color: ${(props) => props.theme.primaryColor};
+	color: ${(props) => props.theme.secondaryColor};
 	font-size: 70px;
 	font-weight: 300;
 	@media (max-width: 720px) {
@@ -27,7 +27,7 @@ const Title2 = styled.h1`
 `;
 
 const TitleContainer = styled.div`
-	border-left: #2f4858 2px solid;
+	border-left: ${(props) => props.theme.secondaryColor} 2px solid;
 	padding-left: 15px;
 	/* transform: translateX(-10px); */
 `;
@@ -47,7 +47,7 @@ const Nav = styled.h4`
 			props.theme
 				.secondaryColor}; /* This creates the border. Replace black with whatever color you want. */
 	padding-bottom: 5px;
-	color: #434343;
+	color: ${(props) => props.theme.secondaryColor};
 `;
 
 const Container = styled.div`

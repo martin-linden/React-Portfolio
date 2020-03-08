@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import AboutMe from '../images/about.png';
+import AboutMe from '../images/me.png';
 
 const Title = styled.h1`
-	color: ${(props) => props.theme.primaryColor};
+	color: ${(props) => props.theme.secondaryColor};
 	font-size: 60px;
 	font-weight: 900;
 	margin-bottom: 10%;
 `;
 
 const Text = styled.div`
-	color: black;
 	max-width: 400px;
 
 	@media (max-width: 780px) {
@@ -41,6 +40,8 @@ const Picture = styled.img`
 	flex-direction: row;
 	align-items: flex-end;
 	height: 500px;
+	background-color: rgba(255, 255, 255, 0.13);
+	clip-path: circle(40% at 49% 49%);
 
 	@media (max-width: 780px) {
 		//medium-screen
@@ -49,7 +50,10 @@ const Picture = styled.img`
 	}
 `;
 
-const TextArea = styled.div`font-size: 17px;`;
+const TextArea = styled.div`
+	font-size: 19px;
+	color: #fff;
+`;
 
 const Container = styled.div`
 	height: 100%;
@@ -65,7 +69,7 @@ const Container = styled.div`
 `;
 
 const Links = styled.a`
-	color: darkblue;
+	color: #fff;
 	text-decoration: none;
 	font-weight: 600;
 `;
@@ -78,8 +82,8 @@ const Span = styled.span`
 const Grid = styled.div`
 	grid-column-start: 1;
 	grid-column-end: -1;
-	grid-row-start: 5;
-	grid-row-end: 5;
+	grid-row-start: 3;
+	grid-row-end: 4;
 	@media (max-width: 780px) {
 		//medium-screen
 		grid-column-start: 2;

@@ -1,6 +1,6 @@
 const theme = {
-	primaryColor: '#f65744',
-	secondaryColor: '#2f4858'
+	primaryColor: 'rgba(74, 94, 112, 0.700)',
+	secondaryColor: '#fff'
 };
 
 export default theme;
