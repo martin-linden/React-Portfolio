@@ -1,11 +1,21 @@
-This project is available online at [martinlinden.com](https://martinlinden.com/).
+# Martin Lindén - React Portfolio
 
-## Martin Lindén - React Portfolio
+A project portfolio built with React
 
-This is my portfolio website made with React.
+This project is available [here](https://trusting-wright-cfd560.netlify.app)
 
-### `Techologies and packages used`
+## About the portfolio
+My first project built with React & Styled Components.
 
- - React
- - React Router DOM
- - Styled Components
+## Built With
+
+* [React](https://reactjs.org/) - Javascript Library
+* [Styled Components](https://styled-components.com/) - Visual primitives for the component age
+* [React Router DOM](https://www.npmjs.com/package/react-router-dom) - DOM bindings for React Router.
+
+## Authors
+
+* **Martin Lindén** - *Designer & Developer* - [martin-linden](https://github.com/martin-linden)
+
+
+
